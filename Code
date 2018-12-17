@@ -1,11 +1,11 @@
 #Command Line Code
 
 #Train the algorithm
-#Train with --seed 0, 10, 20, 30 
+#Train with --target_kl = 0.035 0.06 0.08 0.14
 
-python -m spinup.run ppo --exp_name Pendulum31 --env Pendulum-v0 --epochs 200 --gamma 0.999 --clip_ratio 0.2 --steps_per_epoch 12000 --vf_lr 0.018 --target_kl 0.07 --pi_lr 0.0006 --lam 0.999 --seed 0 10 20 30 --train_v_iters 80 --train_pi_iters 80 --data_dir /Users/brianhaney/Desktop/Pendulum --dt
+python -m spinup.run ppo --exp_name Pendulum31 --env Pendulum-v0 --epochs 200 --gamma 0.999 --clip_ratio 0.2 --steps_per_epoch 12000 --vf_lr 0.018 --target_kl 0.035 0.06 0.08 0.14 --pi_lr 0.0006 --lam 0.999 --seed 30 --train_v_iters 80 --train_pi_iters 80 --data_dir /Users/brianhaney/Desktop/Pendulum --dt
 
 #Test the algorithm
-#--seed 30
+#Test --target_kl = 0.06
 
-python -m spinup.run test_policy /Users/brianhaney/Desktop/Pendulum/2018-12-17_Pendulum31/2018-12-17_10-46-54-Pendulum31_s30
+python -m spinup.run test_policy /Users/brianhaney/Desktop/Pendulum/2018-12-17_Pendulum31_tar0-06/2018-12-17_12-56-14-Pendulum31_tar0-06_s30
