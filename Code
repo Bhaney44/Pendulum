@@ -1,0 +1,3 @@
+#Command Line Code
+
+python -m spinup.run test_policy /Users/brianhaney/Desktop/Pendulum/2018-12-17_Pendulum31/2018-12-17_10-46-54-Pendulum31_s30
